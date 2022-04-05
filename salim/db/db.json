@@ -1,0 +1,18 @@
+{
+    "restaurants": [
+      { 
+        "id": 1, 
+        "name": "KFC Restaurant", 
+        "address": "paris",
+        "email":"kfc@test.com" 
+      },
+      { 
+        "id": 2, 
+        "name": "MacDonald Restaurant", 
+        "address": "paris",
+        "email":"macdonald@test.com" 
+      }
+   
+    ]
+    
+  }

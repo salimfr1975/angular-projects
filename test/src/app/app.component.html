@@ -1,0 +1,96 @@
+
+<app-header></app-header>
+<button style="background-color: red;color:white" 
+(click)="obtNom('red')">Red</button>
+
+<button style="background-color: green;color:white" 
+(click)="obtNom('green')">Green</button>
+
+<button style="background-color: blue;color:white" 
+(click)="obtNom('blue')">Blue</button>
+
+<button style="background-color: pink;color:white" 
+(click)="obtNom('pink')">Pink</button>
+
+<button style="background-color: tan;color:white" 
+(click)="obtNom('tan')">Tan</button>
+
+<ng-template [ngIf]="show=='red'">
+    <h2>Red </h2>
+    <div (mouseleave)="moLev1('Red Color')" 
+    style="border: 2px solid black;
+    height:212px;width:212px;background-color:red">
+    </div>
+</ng-template>
+<ng-template [ngIf]="show=='blue'">
+    <h2>Blue </h2>
+    <div (mouseleave)="moLev1('Blue Color')" 
+    style="border: 2px solid black;
+    height:212px;width:212px;background-color:blue"></div>
+</ng-template>
+<ng-template [ngIf]="show=='green'">
+    <h2>Green </h2>
+    <div (mouseleave)="moLev1('Green Color')" 
+    style="border: 2px solid black;
+    height:212px;width:212px;background-color:green"></div>
+</ng-template>
+<ng-template [ngIf]="show=='pink'">
+    <h2>Pink </h2>
+    <div (mouseleave)="moLev1('Pink Color')" 
+    style="border: 2px solid black;
+    height:212px;width:212px;background-color:pink"></div>
+</ng-template>
+<ng-template [ngIf]="show=='tan'">
+    <h2>Tan  </h2>
+    <div (mouseleave)="moLev1('Tan Color')" 
+    style="border: 2px solid black;
+    height:212px;width:212px;background-color:tan"></div>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <h2 style="color:red;" *ngSwitchCase="'red'">
+        Red Color
+    </h2>
+    <h2 style="color:green;" *ngSwitchCase="'green'">
+        Green Color
+    </h2>
+    <h2 style="color:blue"; *ngSwitchCase="'blue'">
+        Blue Color
+    </h2>
+    <h2 style="color: yellow;" *ngSwitchCase="'yellow'">
+        Yellow Color
+    </h2>
+    <h2 style="color:orange;" *ngSwitchCase="'orange'">
+        Orange Color
+    </h2>
+
+    
+</div>
+
+
+<table border="1" style="background-color:blue">
+    <tr>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Adresse</td>
+        <td>Email</td>
+        <td>Operation</td>
+    </tr>
+    <tr *ngFor="let list of data" style="background-color:lightblue">
+        <td style="background-color:orange">{{list.nom}}</td>
+        <td>{{list.prenom}}</td>
+        <td>{{list.adresse}}</td>
+        <td style="background-color:orange">{{list.email}}</td>
+        <td><button>Edit</button><button>Delete</button></td>
+       
+    </tr>
+</table>
+
+
+
+<app-footer></app-footer>
+
+
+
+
+

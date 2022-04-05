@@ -1,0 +1,122 @@
+<h1>Products</h1>
+<br>
+<table class="center">
+    <tr id="abc">
+        <td>
+            <img src="./assets/furniture.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture2.jpg">
+        </td>
+    
+        <td>
+            <img src="./assets/furniture3.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture4.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="./assets/furniture5.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture6.jpg">
+        </td>
+  
+        <td>
+            <img src="./assets/sofa1.jpg">
+        </td>
+        <td>
+            <img src="./assets/sofa2.jpg">
+        </td>
+       
+    </tr>
+    <tr>
+        <td>
+            <img src="./assets/sofa3.jpg">
+        </td>
+        <td>
+            <img src="./assets/sofa4.jpg">
+        </td>
+        <td>
+            <img src="./assets/sofa5.jpg">
+        </td>
+        <td>
+            <img src="./assets/sofa6.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="./assets/furniture.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture2.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture3.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture4.jpg">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <img src="./assets/furniture5.jpg">
+        </td>
+        <td>
+            <img src="./assets/furniture6.jpg">
+        </td>
+        <td>
+            <img src="./assets/sofa1.jpg">
+        </td>
+        <td>
+            <img src="./assets/sofa2.jpg">
+        </td>
+    </tr>
+</table>
+
+
+
+
+create database abcgarage
+
+
+create table emp
+(
+    id int,
+    nom varchar(255),
+    prenom varchar(255),
+    tel varchar(255),
+    email varchar(255),
+    v_id int
+);
+
+create table ville
+(
+    id int,
+    ville_nom varchar(255)
+);
+
+
+insert into emp(nom,prenom,tel,email,v_id) values 
+("abdoul","oualid","01-77858987","abdoul@gmail.com",1);
+
+
+
+update emp set vid = 1 where id = 1;
+
+
+alter table emp add salary int;
+
+
+alter table emp drop column email;
+
+
+select * from emp order by salary;
+
+
+update emp set salary = 2000 where id = 1;
+
+
+

@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+<button (click)="getName('salim')">Get my name</button>
+<input type ="text" #box (keydown)="myEvent(box.value)">
+<input type ="text" #box (blur)="myEvent('blur event')">
+<br><br>
+<div (mouseleave)="myEvent('mouse in')" style="background-color:skyblue;">Mouse Event
+</div>
+<br><br>
+<h2>{{currentVal}}</h2>
+<!--
+<h1 *ngIf="show=='yes'; then ifBlock else elseBlock">If block</h1>
+
+<ng-template #ifBlock>
+    <h1>if Block</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>else Block</h1>
+</ng-template>
+-->
+
+
+<div [ngSwitch]="color">
+    <h2 style="color:red;" *ngSwitchCase="'red'">
+        Red Color
+    </h2>
+    <h2 style="color:green;" *ngSwitchCase="'green'">
+        Red Color
+    </h2>
+    <h2 style="color:blue" *ngSwitchCase="'blue'">
+        Red Color
+    </h2>
+    <h2 style="color:yellow;" *ngSwitchCase="'yellow'">
+        Red Color
+    </h2>
+</div>
+
+<table border="1">
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            Age
+        </td>
+        <td>
+            Email
+        </td>
+    </tr>
+    <tr *ngFor="let item of data">
+        <td>
+            {{item.name}}
+        </td>
+        <td>
+            {{item.age}}
+        </td>
+        <td>
+            {{item.email}}
+        </td>
+    </tr>
+</table>
+<br>
+<br>
+<br>
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+    <input type="text" ngModel name="username" placeholder="enter name">
+    <br><br>
+    <input type="text" ngModel name="age" placeholder="enter age">
+    <br><br>
+    <input type="text" ngModel name="address" placeholder="enter address">
+    <br><br>
+    <input type="password" ngModel name="password" placeholder="enter password">
+    <br><br>
+    <button>Get User Value</button>
+
+
+</form>
+
+<br><br>
+<div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+    </label>
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" value="middle"> Middle
+    </label>
+    <label ngbButtonLabel class="btn-primary">
+      <input ngbButton type="radio" [value]="false"> Right
+    </label>
+  </div>
+  <hr>
+
+
+<br><br><br>
+
+
+<app-users [hero]="data1"></app-users>
+
+<app-footer></app-footer>

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    height:auto;
+    margin: 0%;
+   
+}
+app-footer
+{
+    position:absolute;
+    width: 100%;
+    bottom: auto;
+    margin: auto;
+}
